@@ -21,12 +21,12 @@ function getDetails(){
         	$.each(data, function(key, val){
         		items.push("<tr>");
         		items.push("<td>" + val.id + "</td>");
-                items.push("<td>" + val.category + "</td>");
-        		items.push("<td>" + val.name + "</td>");
+                items.push("<td>" + val.project_category + "</td>");
+        		items.push("<td>" + val.project_name + "</td>");
         		items.push("<td>" + val.description + "</td>");
         		items.push("<td>" + val.price + "</td>");
         		items.push("<td>" + val.date + "</td>");
-                items.push("<td>" + val.goal + "</td>");
+                items.push("<td>" + val.project_goal + "</td>");
         		items.push("<tr>");
         	});
         	$("<tbody/>", {html: items.join("")}).appendTo("#all_projects");
@@ -53,13 +53,13 @@ function getDetailsById(){
         	
         	
         		items.push("<tr>");
-        		items.push("<td>" + val.id + "</td>");
-                items.push("<td>" + val.category + "</td>");
-        		items.push("<td>" + val.name + "</td>");
-        		items.push("<td>" + val.description + "</td>");
-        		items.push("<td>" + val.price + "</td>");
-        		items.push("<td>" + val.date + "</td>");
-                items.push("<td>" + val.goal + "</td>");
+        		items.push("<td>" + data.id + "</td>");
+                items.push("<td>" + data.project_category + "</td>");
+        		items.push("<td>" + data.project_name + "</td>");
+        		items.push("<td>" + data.description + "</td>");
+        		items.push("<td>" + data.price + "</td>");
+        		items.push("<td>" + data.date + "</td>");
+                items.push("<td>" + data.project_goal + "</td>");
         		items.push("<tr>");
         	
         	$("<tbody/>", {html: items.join("")}).appendTo("#one_project");
